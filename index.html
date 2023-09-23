@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav style="text-align: center" class="navbar">
+        <div class="popup" onclick="myFunction()">Click here to login</div>
+    </nav>
+    <div class="pop">
+        <div class="popuptext" id="myPopup">
+            <h2>Login page</h2>
+            <div class="username">
+                <p id="user">Username</p>
+                <input type="text">
+            </div>
+            <div class="password">
+                <p id="pass">Password</p>
+                <input type="password">
+            </div>
+            <div class="submit">
+                <button>submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="calendar">
+        <thead>
+            
+        </thead>
+    </div>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+        function verified() {
+          var sucess = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
