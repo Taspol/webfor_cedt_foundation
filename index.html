@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <nav style="text-align: center" class="navbar">
-        <div class="popup" onclick="myFunction()">Click here to login</div>
+        
+            <div class="popup" onclick="myFunction()"><span class="login">login</span></div>
+        
     </nav>
     <div class="pop">
         <div class="popuptext" id="myPopup">
-            <h2>Login page</h2>
+            <h2 style="font-weight: bold; margin-top: 30px ">LOGIN</h2>
             <div class="username">
                 <p id="user">Username</p>
-                <input type="text">
+                <i class="glyphicon glyphicon-user"></i>
+                <input type="text" class="intext">
             </div>
             <div class="password">
                 <p id="pass">Password</p>
-                <input type="password">
+                <i class="glyphicon glyphicon-lock"></i>
+                <input type="password" class="intext">
             </div>
-            <div class="submit">
-                <button>submit</button>
-            </div>
+            <button class="submit">Login</button>
         </div>
     </div>
     <div class="calendar">

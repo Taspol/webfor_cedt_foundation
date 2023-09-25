@@ -1,14 +1,20 @@
-.navbar {
-  background-color:rgb(182, 182, 182);
-  
+
+body{
+  font-family: 'Bai Jamjuree', sans-serif;
 }
-
-
+.navbar {
+  padding: 10px;
+  /* background-color:rgb(182, 182, 182); */
+}
+.login{
+  background-color:rgb(175, 175, 175);
+  padding: 6px;
+  border-radius: 20%;
+}
 .navbar .popup {
-  position: relative;
-  text-align: center;
+  position: left;
+  text-align: right;
   cursor : pointer;
-  /* margin-left: 35px; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -17,50 +23,73 @@
 .pop {
   position: relative;
   display: center;
-  cursor : pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
+  
 }
 
 /* The actual popup */
-.pop .popuptext {
+.popuptext {
   visibility: hidden;
-  width: 400px;
-  background-color: #555;
+  width: 340px;
+  background-color: #688ebe;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
   position: absolute;
   z-index: 1;
-  bottom: -400px;
-  left: 35%;
+  margin-top : 90px;
+  left: 40%;
+}
+.intext {
+	appearance: none;
+	border: none;
+	outline: none;
+  margin-top:1px ;
  
+	border-bottom: .2em solid #0d5497;
+	background: #d3e2f0;
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #0e254b;
 }
-.pop .popuptext #user{
-  display: center;
+#user{
+  /* border: 2px solid blue; */
   border-radius: 10%;
-  background-color:gray;
-  margin-left: 150px;
+  font-size: 14px;
+  margin-top: 60px;
+  margin-left:66px;
+  margin-bottom: 5px;
   width: 100px;
 }
-.pop .popuptext #pass{
+#pass{
   display: center;
+  font-size: 14px;
   border-radius: 10%;
-  background-color:gray;
-  margin-left: 150px;
+  margin-top: 20px;
+  margin-left: 65px;
+  margin-bottom: 5px;
   width: 100px;
 }
-.pop .submit{
-  padding-top:10px;
-  border-radius: 10%;
+
+.submit{
+  font-family: 'Bai Jamjuree', sans-serif;
+  padding:8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 30%;
+  border: none;
+	outline: none;
+  background-color: #0f5faa;
+  
+	&:hover, &:active {
+		background: #0a4072;
+		color: #fff;
+	}
 }
-.pop .submit button{
+/* .pop .submit button{
   border-radius: 20%;
   background-color: bisque;
-}
+} */
 
 /* Popup arrow */
 /* .popup .popuptext::after {
@@ -73,6 +102,7 @@
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 } */
+
 
 /* Toggle this class - hide and show the popup */
 .pop .show {
