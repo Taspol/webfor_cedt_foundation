@@ -1,0 +1,8 @@
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+function verified() {
+    var sucess = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
