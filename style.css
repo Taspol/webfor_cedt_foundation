@@ -24,15 +24,34 @@ body { font-family: 'Bai Jamjuree', sans-serif;
   margin : auto;
   position: center;
   width : 600px;
-  border: 3px solid #f1f1f1;
   z-index: 9;
+  display: flex;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
+  border-radius: 6%;
+  background-image: linear-gradient(rgb(204, 204, 204), rgb(255, 255, 255));
+  max-width: 700px;
+  padding: 20px;
+  display: flex;
+  display: center;
   background-color: white;
+  animation: fadeIn 1s;
+}
+.left-side{
+  width: 300px;
+  padding-right: 20px;
+}
+.right-side{
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+.logo{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -41,34 +60,48 @@ body { font-family: 'Bai Jamjuree', sans-serif;
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
+  border-radius: 10%;
   border: none;
   background: #f1f1f1;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(240, 240, 240));
   outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #4eeb68;
+  color: rgb(60, 60, 60);
   padding: 16px 20px;
+  border-radius: 10%;
+  transition: 0.6s;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
   margin-bottom:10px;
   opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: rgb(196, 196, 196);
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+.form-container .btn:hover {
+  width: 255px;
+}
+.form-container .cancel:hover {
+  width: 255px;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

@@ -6,26 +6,29 @@
     </head>
 <body>
 
-    <h2>Popup Form</h2>
-    <p>Click on the button at the bottom of this page to open the login form.</p>
-    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+    <h2>Calendar</h2>
 
     <button class="open-button" onclick="openForm()">Login</button>
 
     <tbody>
         <div class="form-popup" id="myForm">
             <form class="form-container">
-                <h1>Login</h1>
+                <div style="border-right-style:groove;" class="left-side">
+                        <h1 style="text-align: center;">Login</h1>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Guest</button>
+                </div>
+                <div class="right-side">
+                        <img src="logo.png" class="logo">
+                </div>
             </form>
+            
         </div>
 
     </tbody>
