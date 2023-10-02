@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <button class="loginbutt">login</button>
-    <h1>Calendar</h1>
-    <p>this is my login page</p>
-    <div class="login-form" id="myForm">
-        <h1>Login</h1>
-        <div class="username">
-            <p>Username</p>
-            <input  placeholder="Enter username" type="text">
-        </div>
-        <div class="password">
-            <p>Password</p>
-            <input placeholder="Enter password" type="password">
-        </div>
-        <button class="submit">Login</button>
-        <button class="close">Close</button>
 
-    </div>
+    <h2>Popup Form</h2>
+    <p>Click on the button at the bottom of this page to open the login form.</p>
+    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+    <button class="open-button" onclick="openForm()">Login</button>
+
+    <tbody>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </tbody>
+
+    <script src="script.js"></script>
     
+
 </body>
 </html>
