@@ -1,46 +1,347 @@
+:root {
+  --dark-popup: #4d4c5a;
+  --dark-body: #25263a;
+  --dark-main: #141529;
+  --dark-second: #79788c;
+  --dark-hover: #323048;
+  --dark-text: #f8fbff;
+  --dark-date: #79788c;
 
-body { font-family: 'Bai Jamjuree', sans-serif;
+  --light-popup: #fff;
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #edf0f5;
+  --light-text: #151426;
+  --light-date: #e6eaf0;
+
+  --blue: #0000ff;
+  --white: #fff;
+
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  --font-family: Poppin , sans-serif;
 }
-* {box-sizing: border-box;}
+
+.dark {
+  --popup: var(--dark-popup);
+  --bg-body: var(--dark-body);
+  --bg-main: var(--dark-main);
+  --bg-second: var(--dark-second);
+  --color-hover: var(--dark-hover);
+  --color-txt: var(--dark-text);
+  --color-date: var(--dark-date);
+}
+
+.light {
+  --popup: var(--light-popup);
+  --bg-body: var(--light-body);
+  --bg-main: var(--light-main);
+  --bg-second: var(--light-second);
+  --color-hover: var(--light-hover);
+  --color-txt: var(--light-text);
+  --color-date: var(--light-date);
+}
+
+html,
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-body);
+    color: var(--color-txt);
+}
+p{
+  margin: 0;
+}
+
+
+
+
+
+#heading{
+  border-bottom: solid;
+  color: var(--color-txt);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar {
+  text-align: center;
+  
+  padding: 10px;
+}
+
+
+
+.wrapper{
+  display: none;
+  box-sizing: border-box;
+  background-color: var(--bg-body);
+}
+
+
+.col-1{
+  background-color: var(--bg-body);
+  width: 50%;
+  align-items: center;
+  height: auto;
+  margin: auto;
+  }
+
+.light table{
+  box-shadow: var(--shadow);
+}
+
+#month-heading{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-txt);
+}
+
+table {
+  border-spacing: 0;
+  background-color: var(--bg-main);
+  border-radius: 30px;
+}
+
+/*tbody tr:first-child td:first-child {
+  border-top-left-radius: 25px;
+}
+
+tbody tr:first-child td:last-child {
+  border-top-right-radius: 25px;
+}*/
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 30px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 30px;
+}
+
+thead tr td{
+  font-size: 19px;
+}
+
+thead tr td .month-heading {
+  text-align: center;
+}
+
+thead tr .months{
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
+
+thead tr .days{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+td{
+  width: 98px;
+  text-align: center;
+}
+
+thead tr{
+  height: 10px; 
+}
+
+tbody{
+  border: none;
+  border-top-left-radius: 50px;
+}
+
+tbody tr td{
+  border: none;
+  height: 98px;
+  padding-bottom: 10%;
+  padding-left: 1.5%
+}
+
+table{
+  background-color: var(--bg-main);
+  
+}
+
+#left-arrow, #right-arrow{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  bottom: 5px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: var(--color-txt);
+  background-color: var(--bg-main);
+}
+
+#left-arrow{
+  top: 185px;
+  left: 275px;
+  position: fixed;
+}
+
+#left-arrow:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#right-arrow{
+  top: 185px;
+  left: 550px;
+  position: fixed;
+}
+
+#right-arrow:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.days {
+  color: var(--bg-second);
+  font-weight: 600;
+}
+
+.Month_TableData{
+  border:1px solid var(--dark-main); 
+   background-color:var(--color-date);
+ }
+ .Month_TableData_Marked{
+   border:1px solid var(--dark-main); 
+   background-color: #0068ff;
+ }
+
+
+.col-2{
+background-color: var(--bg-body);
+width: 40%;
+}
+
+.todo {
+  border-radius: 30px;
+  background-color: var(--bg-main);
+  width: 550px;
+  height: max-content;
+}
+
+.todolist {
+  height: fit-content;  
+}
+
+.top{
+text-align: center;
+margin: 0%;
+font-size: 200%;
+color: var(--color-txt);
+padding-top: 20px;
+padding-bottom: 20px;
+font-weight: bold;
+}
+
+#To-Do-word {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#CurrentDayIndicate {
+  font-size: 75%;
+}
+
+.List {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+/* The container */
+.Task {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--color-txt);
+  margin-left: 20px;
+  }
+
+  .List{
+  z-index: index 0;
+  margin-left: 5%;
+  margin-top: 5%;
+  }
+
+  #todo-listAddButton, #task-addButton, #task-cancelButton {
+    background-color: #653db4;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+  }
+  #TaskName-Input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: var(--popup);
+  }
+  #DeleteData {
+    background-color: #653db4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+  }
+  buttom
+  {
+  position: absolute;
+  }
+
+ *{box-sizing: border-box;}
+
+
+
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 
 .open-button {
   background-color: #653db4;
-  border-radius: 10%;
+  border-radius: 20px;
   color: white;
   padding: 10px 10px;
   border: none;
   cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 560px;
-  right: 28px;
-  width: 100px;
+  margin-left: 97%;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
-  margin : auto;
-  position: center;
-  width : 600px;
-  z-index: 9;
-  display: flex;
+  margin: auto;
+  width : 500px;
+  z-index: 100;
+  color: var(--color-txt)
 }
 
 /* Add styles to the form container */
 .form-container {
+  position: fixed;
   border-radius: 6%;
-  background-image: linear-gradient(rgb(204, 204, 204), rgb(255, 255, 255));
   max-width: 700px;
   padding: 20px;
   display: flex;
   display: center;
-  background-color: white;
+  background-color: var(--color-hover);
   animation: fadeIn 1s;
 }
 .left-side{
-  width: 300px;
+  width: 280px;
   padding-right: 20px;
 }
 .right-side{
@@ -60,21 +361,20 @@ body { font-family: 'Bai Jamjuree', sans-serif;
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  border-radius: 10%;
   border: none;
-  background: #f1f1f1;
+  background: var(--popup);
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(240, 240, 240));
+  background-color: var(--bg-second);
   outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #4eeb68;
-  color: rgb(60, 60, 60);
+  background-color: #653db4;
+  color: white;
   padding: 16px 20px;
   border-radius: 10%;
   transition: 0.6s;
@@ -87,7 +387,7 @@ body { font-family: 'Bai Jamjuree', sans-serif;
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: rgb(196, 196, 196);
+  background-color: var(--bg-second)
 }
 
 /* Add some hover effects to buttons */
@@ -100,6 +400,20 @@ body { font-family: 'Bai Jamjuree', sans-serif;
 }
 .form-container .cancel:hover {
   width: 255px;
+}
+
+#pan {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+  animation: fadeIn 1s;
+}
+.signin{
+  font-size: 14px;
+  color: var(--color-txt);
+  margin-top: 0px;
+  padding-left: 102px;
+  cursor: pointer;
 }
 @keyframes fadeIn {
   from {opacity: 0;}

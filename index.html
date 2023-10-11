@@ -1,40 +1,103 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Planner</title>
         <link rel="stylesheet" href="style.css">
     </head>
-<body>
-
-    <h2>Calendar</h2>
-
-    <button class="open-button" onclick="openForm()">Login</button>
-
-    <tbody>
-        <div class="form-popup" id="myForm">
-            <form class="form-container">
+    <body class="dark">
+        <nav  class="navbar">
+            <span id="heading" style="font-size: 50;">Planner</span>
+            <button class="open-button">Login</button>
+        </nav>
+        <div class="form-popup" id="LoginForm">
+            <div class="form-container">
                 <div style="border-right-style:groove;" class="left-side">
-                        <h1 style="text-align: center;">Login</h1>
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <h1 id="LoginHeading" style="text-align: center;">Login</h1>
+                        <label for="Username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" id="username" required>
 
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-
-                        <button type="submit" class="btn">Login</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">Guest</button>
+                        <input type="password" placeholder="Enter Password" id="psw" required>
+                        <p id="loginStatus" style="color: red; display: none;">Incorrect password or username</p>
+                        <br>
+                        <button style="border-radius: 20px;" class="btn" id="loginbtn">Login</button>
+                        <button style="border-radius: 20px;" class="btn cancel" id="guestbtn" onclick="closeForm()">Guest</button>
+                        <button style="border-radius: 20px; display: none;" type="button" class="btn signin" id="signinnew" >Sign Up</button>
+                        <p style="margin: auto;" class = "signin" id="signinbtn">Sign Up</p>
+                        <p style="display: none;" class = "signin" id="gologin">Log in</p>
                 </div>
-                <div class="right-side">
+                <div class="right-side"> 
                         <img src="logo.png" class="logo">
                 </div>
-            </form>
-            
+            </div>
         </div>
-
-    </tbody>
-
-    <script src="script.js"></script>
+        <div class="wrapper" id = "calendar">
     
+                <div class="col-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="7" class="months">
+                                    <button id="left-arrow"><</button>
+                                    <span id="month-heading">January 2566</span>
+                                    <button id="right-arrow">></button>
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr class="days">
+                                <td style="border: 2px;">Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thu</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                                <td>Sun</td>
+                            </tr>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="col-2">
+                    <table class="todo">
+                        <thead>
+                            <tr>
+                                <td colspan="2" class="top"> 
+                                    <p id="To-Do-word">
+                                        To-Do lists
+                                    </p>
+                                    <p id="CurrentDayIndicate">-</p>
+                                    <button id="DeleteData" style="margin-left: 84%;">X</button>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody class="todobody">
+                            <tr class="todolist">
+                                <td class="List">
+                                    <p class="Task">One</p>
+                                    <p class="Task">Two</p>
+                                    <p class="Task">Three</p>
+                                    <p class="Task">Four</p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="button">
+                                    <button id="todo-listAddButton"> click me!</button>
+                                </td>
+                            </tr>
 
-</body>
+                        </tbody>
+                    </table>
+                </div>
+           
+            
+            
+
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
